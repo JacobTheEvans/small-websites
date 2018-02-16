@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grapher</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/views/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.light_blue-blue.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body ng-app="app">
+  <div ng-controller="mainControler">
+    <div id="scrollArea" class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <div class="mdl-layout-spacer"></div>
+          <a class="nav-link custom-title"><span class="mdl-layout-title title-nav"><span class="only-nav">Grapher</span> <i class="fa fa-bar-chart"></i></span></a>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title m-drawer-title">Grapher <i class="fa fa-bar-chart"></i></span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link custom-link" ng-click="toggleSort()">Toggle Sort <i class="fa fa-sort-amount-asc"></i></a>
+          <a class="mdl-navigation__link custom-link" ng-click="save()">Download Graph <i class="fa fa-download"></i></a>
+          <a class="mdl-navigation__link custom-link" href="https://github.com/JacobTheEvans/Grapher">Source Code <i class="fa fa-github"></i></a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="cont">
+          <div ng-if="dataToPlot.length > 0" sort="{{doSort}}" xLabel="{{userInput.x}}" yLabel="{{userInput.y}}" chart chart-data="dataToPlot"></div>
+          <div style="width: 91%; text-align: center; margin-right: auto; margin-left: auto; margin-top: 40px; margin-bottom: 40px;" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-custom">
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                <h4>X And Y Axis</h4>
+                <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="key" ng-model="userInput.y">
+                    <label class="mdl-textfield__label" for="key">Y Axis</label>
+                  </div>
+                </form>
+                <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="key" ng-model="userInput.x">
+                    <label class="mdl-textfield__label" for="key">X Axis</label>
+                  </div>
+                </form>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+                <h4>Add Data</h4>
+                <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="key" ng-model="userInput.key">
+                    <label class="mdl-textfield__label" for="key">Key</label>
+                  </div>
+                </form>
+                <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="value" ng-model="userInput.value">
+                    <label class="mdl-textfield__label" for="value">Value</label>
+                  </div>
+                </form>
+                <div class="add-btn">
+                  <button ng-click="add()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Add</button>
+                </div>
+              </div>
+              </div>
+            </div>
+          <table ng-if="dataToPlot.length > 0" style="width: 91%; margin-top: 20px; margin-bottom: 40px; margin-right: auto; margin-left: auto; text-align: left;" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-custom">
+            <tr>
+              <td>Remove</td>
+              <td>Key</td>
+              <td>Value</td>
+            </tr>
+            <tr ng-repeat="data in dataToPlot">
+              <td ng-click="remove(data.key)">
+                <button class="mdl-button mdl-js-button mdl-button--primary">
+                  <i class="material-icons">remove</i>
+                </button>
+              </td>
+              <td>{{data.key}}</td>
+              <td>{{data.value}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/js/saveSvgAsPng.js"></script>
+  <script src="/js/d3.v3.min.js"></script>
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

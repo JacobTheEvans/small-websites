@@ -1,0 +1,28 @@
+<div class="q1-background"><div>
+<div class="header-inner">
+</div>
+<div class="logo-inner mdl-shadow--4dp" ng-if="fail == false" id="q-box">
+  <h2 class="q-logo">How much money did Andy Dufresne get away with in The Shawshank Redemption?</h2>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    $4,440,00
+  </button>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="suc()">
+    $370,000
+  </button>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    $900
+  </button>
+</div>
+<div class="logo-inner fail-box mdl-shadow--4dp" ng-if="fail == true">
+  <img src="/images/fail.png" class="fail-image">
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    Retry?
+  </button>
+</div>

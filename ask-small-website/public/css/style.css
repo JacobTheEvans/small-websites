@@ -1,0 +1,132 @@
+body, html {
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+p {
+  font-size: 20px;
+}
+
+.starter-background {
+  background: url(../images/movie.jpeg) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.q1-background {
+  background: url(../images/shawshank.jpg) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Preserve aspet ratio */
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.q2-background {
+  background: url(../images/road.jpg) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.q3-background {
+  background: url(../images/godfather.png) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.message-background {
+  background: url(../images/break.jpg) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.header-inner {
+  padding-top: 25vh;
+  text-align: center;
+  background-color: rgba(255, 82, 82, .7);
+  width: 100%;
+  height: 75vh;
+}
+
+.logo {
+  font-size: 50px;
+  color: #3f3f3f;
+}
+
+.q-logo {
+  color: #3f3f3f;
+}
+
+.logo-inner {
+  margin-top: -70vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 40%;
+  background-color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  overflow-y: visible;
+}
+
+.fail-box {
+  margin-top: -85vh;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.fail-image {
+  width: 90%;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 775px) {
+  .logo-inner {
+    width: 100%;
+  }
+}
+
+@media (max-width: 775px) {
+  .logo-inner {
+    width: 100%;
+  }
+}

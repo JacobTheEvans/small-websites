@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Othello Game</title>
+  <link rel="stylesheet" href="./core/style.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue-indigo.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="app" ng-controller="mainController">
+  <div class="main">
+  </div>
+  <div class="top">
+  </div>
+  <div class="logo-box" ng-if="!play">
+    <h1 class="logo">Othello Game</h1>
+    <h2 class="sub-logo">By Dakota and Jacob</h2>
+    <div class="button-logo-sec">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent white-text" ng-click="togglePlay()">
+        Play It
+      </button>
+    </div>
+  </div>
+  <div class="question-box mdl-shadow--2dp" ng-if="play && qIndex != -1 && qIndex < questions.length" ng-init="loadSound()">
+    <div ng-repeat="q in questions track by $index" ng-if="qIndex == q.index">
+      <h3 class="q-text">{{q.question}}</h3>
+      <div ng-repeat="a in q.answers">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" ng-click="submit(q.index,a)">
+          {{a}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="answer-box mdl-shadow--2dp" ng-if="qIndex == -1">
+    <h3 class="a-text">You Lost!</h3>
+  </div>
+  <div class="answer-box mdl-shadow--2dp" ng-if="qIndex == questions.length" ng-init="playWinSound()">
+    <h3 class="a-text">You Win!</h3>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.angularjs.org/1.4.8/angular.min.js"></script>
+  <script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
+  <script src="./core/app.js"></script>
+</body>
+</html>

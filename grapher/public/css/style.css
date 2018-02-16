@@ -1,0 +1,79 @@
+body,html {
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+#chart {
+  background-color: #F5F2EB;
+  border: 1px solid #CCC;
+}
+
+.bar {
+  shape-rendering: crispEdges;
+}
+
+.bar:hover {
+  fill: #f44336 !important;
+}
+
+.bar-label {
+  fill: white;
+  font-size: 14px;
+  text-anchor:end;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.gridline path,
+.gridline line {
+  fill:none;
+  stroke: #ccc;
+  opacity: 0.7;
+}
+
+.mdl-layout__header {
+  background-color: #f44336 !important;
+  color: white;
+}
+
+.mdl-layout-title {
+  float: right !important;
+}
+
+.title-nav {
+  color: white !important;
+}
+
+.custom-title {
+  font-size: 20px !important;
+}
+
+.custom-link {
+  font-size: 16px !important;
+}
+
+.mdl-layout__drawer-button {
+  color: white !important;
+}
+
+.cont {
+  margin-left: 30px;
+}
+
+.mdl-custom {
+  margin-right: 20px;
+}
+
+.add-btn {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1025px) {
+  .only-nav {
+    display: none !important;
+  }
+}

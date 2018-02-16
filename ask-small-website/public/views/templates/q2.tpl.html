@@ -1,0 +1,28 @@
+<div class="q2-background"><div>
+<div class="header-inner">
+</div>
+<div class="logo-inner mdl-shadow--4dp" ng-if="fail == false" id="q-box">
+  <h2 class="q-logo">Where did Michael Faraday teach in Arlington Road?</h2>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    Fordham University
+  </button>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    Wagner College
+  </button>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="suc()">
+    George Washington University
+  </button>
+</div>
+<div class="logo-inner fail-box mdl-shadow--4dp" ng-if="fail == true">
+  <img src="/images/fail.png" class="fail-image">
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    Retry?
+  </button>
+</div>

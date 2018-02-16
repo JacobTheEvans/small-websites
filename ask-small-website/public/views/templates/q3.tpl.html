@@ -1,0 +1,28 @@
+<div class="q3-background"><div>
+<div class="header-inner">
+</div>
+<div class="logo-inner mdl-shadow--4dp" ng-if="fail == false" id="q-box">
+  <h2 class="q-logo">What is Fredo's secret to catching fish in the Godfather II?</h2>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="suc()">
+    He says the Hail Mary
+  </button>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    He Snorts Cocaine
+  </button>
+  <br>
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    He uses Chicken Liver
+  </button>
+</div>
+<div class="logo-inner fail-box mdl-shadow--4dp" ng-if="fail == true">
+  <img src="/images/fail.png" class="fail-image">
+  <br>
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ng-click="toggleFail()">
+    Retry?
+  </button>
+</div>

@@ -1,0 +1,166 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: #C31F25;
+}
+
+.mdl-layout-title {
+  margin-top: 20px;
+  color:  white !important;
+}
+
+.mdl-layout__drawer-button {
+  color: white;
+}
+
+.mdl-layout__drawer {
+  background: #221E1F;
+}
+
+.mdl-navigation__link {
+  color: white !important;
+  font-size: 17px;
+}
+
+.mdl-navigation__link:hover {
+  background-color: #C31F25 !important;
+}
+
+.main {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+#draw {
+  background-image: url('/images/noeyesbigbrother.jpg') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 670px;
+}
+
+.main-logo {
+  font-size: 65px;
+  color: #231F20;
+}
+
+.sub-logo {
+  margin-top: -30px;
+  font-size: 67px;
+  color: white;
+}
+
+.char-logo {
+  font-size: 67px;
+  color: white;
+}
+
+#ellipse div.left_eye,
+#ellipse div.right_eye {
+    background-image: url("/images/ellipse.png");
+}
+div.eyes {
+width: 160px;
+height: 60px;
+margin: 0 auto;
+position: relative;
+margin-top: -347px;
+margin-bottom: 285px;
+}
+
+div.left_eye,
+div.right_eye {
+width: 60px;
+height: 60px;
+top: 0;
+position: absolute;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+div.left_eye {
+left: 0;
+margin-left: -30px;
+}
+
+div.right_eye {
+right: 0;
+margin-right: -37px;
+}
+
+div.eyes div.pupil {
+left: 17px;
+top: 17px;
+width: 25px;
+height: 25px;
+position: relative;
+background-image: url("/images/pupil.png");
+background-repeat: no-repeat;
+background-position: center center;
+}
+
+.color-black {
+  color: #231F20;
+}
+
+.color-white {
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 22px;
+  text-align: left;
+}
+
+.char-sec {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+
+.img-circle {
+  width: 255px;
+  margin-top: -95px;
+  height: 255px;
+  border-radius: 360px;
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.char-name {
+  margin-top: 40px;
+}
+
+.extra {
+  color: #C31F25 !important;
+  text-decoration: none;
+  font-size: 30px !important;
+}
+
+.img-extra {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+}
+
+@media (max-width: 1025px) {
+  .img-circle {
+    margin-top: -45px;
+  }
+}
+
+@media (max-width: 845px) {
+  .img-circle {
+    margin-top: 25px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-extra {
+    width: 100%;
+  }
+}
